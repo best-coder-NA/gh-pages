@@ -99,7 +99,7 @@ $(function() {
 
     //Balances
     const currentSUSHIAVAXTokens = await SUSHI_AVAX_TOKEN.balanceOf(App.YOUR_ADDRESS)
-    const currentPNGAVAXTokens = await SUSHI_AVAX_TOKEN.balanceOf(App.YOUR_ADDRESS)
+    const currentPNGAVAXTokens = await PNG_AVAX_TOKEN.balanceOf(App.YOUR_ADDRESS)
     const currentSPGLSUSHITokens = await SPGL_SUSHI_TOKEN.balanceOf(App.YOUR_ADDRESS)
     const currentSPGLPNGTokens = await SPGL_PNG_TOKEN.balanceOf(App.YOUR_ADDRESS)
     const currentSNOBTokens = await SNOB_TOKEN.balanceOf(App.YOUR_ADDRESS)
@@ -140,7 +140,7 @@ $(function() {
 	// icequeen png staking
 	_print(`<b>IceQueen - AVAX-PNG (New!)</b>`)
 	_print(`Step 1: You must have sPGL (PNG) tokens from SnowGlobe.`)
-	_print(`sPGL token balance: ${currentSPGLPNGTokens / 1e18}\n`)
+	_print(`sPGL token balance: ${currentSPGLPNGTokens > 100 ? currentSPGLPNGTokens / 1e18 : 0}\n`)
 	_print(`Step 2: Approve IceQueen contract to spend your sPGL tokens`)
 	_print_link(`Approve sPGL Tokens\n`, approveSPGLPNG)
 	_print(`Step 3: Deposit your sPGL tokens in IceQueen contract`)
@@ -158,7 +158,7 @@ $(function() {
 	// icequeen sushi staking
 	_print(`<b>IceQueen - AVAX-SUSHI</b>`)
 	_print(`Step 1: You must have sPGL (SUSHI) tokens from SnowGlobe.`)
-	_print(`sPGL token balance: ${currentSPGLSUSHITokens / 1e18}\n`)
+	_print(`sPGL token balance: ${currentSPGLSUSHITokens > 100 ? currentSPGLSUSHITokens / 1e18 : 0}\n`)
 	_print(`Step 2: Approve IceQueen contract to spend your sPGL tokens`)
 	_print_link(`Approve sPGL Tokens\n`, approveSPGLSUSHI)
 	_print(`Step 3: Deposit your sPGL tokens in IceQueen contract`)
