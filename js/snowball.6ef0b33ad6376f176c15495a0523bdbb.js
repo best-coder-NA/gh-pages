@@ -111,22 +111,6 @@ $(function() {
     const stakedPool2 = await ICEQUEEN_CONTRACT.userInfo(2, App.YOUR_ADDRESS)
 	const stakedPool3 = await ICEQUEEN_CONTRACT.userInfo(3, App.YOUR_ADDRESS)
 	_print(`Your wallet address: ${App.YOUR_ADDRESS}\n`);
-    
-	// balance
-	_print(`<b>Wallet Balances</b>`)
-	_print(`Snowballs in wallet: ${currentSNOBTokens / 1e18}\n`)
-	_print(`<u>Pool 1 - SUSHI-AVAX LP (sPGL)</u>`)
-	_print(`Staked Tokens: ${stakedPool1.amount / 1e18}`)
-	_print(`Pending Snowball Rewards: ${pendingSNOBTokensPool1 / 1e18}`)
-	_print_link(`Claim\n`, claimPool1)
-	_print(`<u>Pool 2 - SNOB-AVAX LP (PGL)</u>`)
-	_print(`Staked Tokens: ${stakedPool2.amount / 1e18}`)
-	_print(`Pending Snowball Rewards: ${pendingSNOBTokensPool2 / 1e18}`)
-	_print_link(`Claim\n`, claimPool2)
-	_print(`<u>Pool 3 - PNG-AVAX LP (sPGL)</u>`)
-	_print(`Staked Tokens: ${stakedPool3.amount / 1e18}`)
-	_print(`Pending Snowball Rewards: ${pendingSNOBTokensPool3 / 1e18}`)
-	_print_link(`Claim\n\n`, claimPool3)
 
 	//snowglobe png staking
 	_print(`<b>SnowGlobe - AVAX-PNG (New!)</b>`)
